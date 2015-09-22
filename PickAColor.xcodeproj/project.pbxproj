@@ -81,11 +81,11 @@
 			children = (
 				3FD83B671BB1D67B00604A7C /* AppDelegate.swift */,
 				3FD83B691BB1D67B00604A7C /* ViewController.swift */,
+				3FD83B871BB1D7A700604A7C /* ColorWheel.swift */,
 				3FD83B6B1BB1D67B00604A7C /* Main.storyboard */,
 				3FD83B6E1BB1D67B00604A7C /* Images.xcassets */,
 				3FD83B701BB1D67B00604A7C /* LaunchScreen.xib */,
 				3FD83B651BB1D67B00604A7C /* Supporting Files */,
-				3FD83B871BB1D7A700604A7C /* ColorWheel.swift */,
 			);
 			path = PickAColor;
 			sourceTree = "<group>";
