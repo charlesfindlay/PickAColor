@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = colorWheel.randomColor()
         startGame()
     }
 
@@ -31,6 +32,16 @@ class ViewController: UIViewController {
     func startGame() {
         var computerChoice = colorWheel.randomColor()
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("changeBackgroundColor"), userInfo: nil, repeats: true)
+        
+    }
+    
+    func changeBackgroundColor() {
+        view.backgroundColor = colorWheel.randomColor()
+        
+        if(correctChoice) {
+            timer.invalidate()
+        }
     }
 
 
