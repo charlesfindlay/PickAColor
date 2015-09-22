@@ -15,12 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2q-mp-o20">
+                                <rect key="frame" x="70" y="234" width="180" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="LQg-tz-z5E"/>
+                                    <constraint firstAttribute="height" constant="100" id="YLA-80-Dsy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Guess the Color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getUserGuess:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YlJ-VH-oFY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output of color guess" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-Ec-W6W">
+                                <rect key="frame" x="60" y="72" width="200" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="S6t-Xv-bKB"/>
+                                    <constraint firstAttribute="height" constant="63" id="ctM-Xd-rLw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Ri-Ec-W6W" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="52" id="2Hv-09-Cnd"/>
+                            <constraint firstAttribute="centerX" secondItem="m2q-mp-o20" secondAttribute="centerX" id="Lry-Yb-0b0"/>
+                            <constraint firstAttribute="centerX" secondItem="0Ri-Ec-W6W" secondAttribute="centerX" id="bOq-0z-c3W"/>
+                            <constraint firstAttribute="centerY" secondItem="m2q-mp-o20" secondAttribute="centerY" id="eCk-jX-AK1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guessColorButton" destination="m2q-mp-o20" id="V1y-46-0Zy"/>
+                        <outlet property="resultUserGuess" destination="0Ri-Ec-W6W" id="lkA-H2-P4n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234.66666666666666" y="331.33333333333331"/>
+            <point key="canvasLocation" x="234" y="331"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
