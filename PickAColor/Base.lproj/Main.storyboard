@@ -40,17 +40,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You guessed correctly in ? tries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQI-7h-UJF">
+                                <rect key="frame" x="0.0" y="459" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2vI-6n-0IE"/>
+                                    <constraint firstAttribute="height" constant="40" id="LDx-Yf-Ltf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0Ri-Ec-W6W" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="52" id="2Hv-09-Cnd"/>
+                            <constraint firstAttribute="centerX" secondItem="bQI-7h-UJF" secondAttribute="centerX" id="EXV-Dt-v0T"/>
                             <constraint firstAttribute="centerX" secondItem="m2q-mp-o20" secondAttribute="centerX" id="Lry-Yb-0b0"/>
                             <constraint firstAttribute="centerX" secondItem="0Ri-Ec-W6W" secondAttribute="centerX" id="bOq-0z-c3W"/>
                             <constraint firstAttribute="centerY" secondItem="m2q-mp-o20" secondAttribute="centerY" id="eCk-jX-AK1"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bQI-7h-UJF" secondAttribute="bottom" constant="69" id="khE-mO-sMl"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="guessColorButton" destination="m2q-mp-o20" id="V1y-46-0Zy"/>
+                        <outlet property="guessCounter" destination="bQI-7h-UJF" id="g79-Yk-L3o"/>
                         <outlet property="resultUserGuess" destination="0Ri-Ec-W6W" id="lkA-H2-P4n"/>
                     </connections>
                 </viewController>

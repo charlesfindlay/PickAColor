@@ -12,17 +12,20 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var guessColorButton: UIButton!
     @IBOutlet weak var resultUserGuess: UILabel!
+    @IBOutlet weak var guessCounter: UILabel!
     
     
     var timer = NSTimer()
     let colorWheel = ColorWheel()
     var randomColor = UIColor()
     var computerChoice = UIColor()
+    var count: Int = 0
     
     
     
     override func viewWillAppear(animated: Bool) {
         resultUserGuess.hidden = true
+        guessCounter.hidden = true
     }
     
     override func viewDidLoad() {
@@ -32,6 +35,8 @@ class ViewController: UIViewController {
         view.backgroundColor = randomColor
         guessColorButton.tintColor = randomColor
         guessColorButton.backgroundColor = UIColor.whiteColor()
+        guessColorButton.layer.cornerRadius = 25
+        guessColorButton.layer.borderWidth = 2
         
         startGame()
     }
@@ -45,11 +50,14 @@ class ViewController: UIViewController {
     
     @IBAction func getUserGuess(sender: AnyObject) {
         var currentColor = view.backgroundColor
+        count++
         
         if(currentColor == computerChoice) {
             timer.invalidate()
-            resultUserGuess.text = "You guessed correctly!"
+            resultUserGuess.text = "Great Job!"
             resultUserGuess.hidden = false
+            guessCounter.text = "You guessed the color in \(count) tries"
+            guessCounter.hidden = false
         } else {
             resultUserGuess.text = "Wrong! Try Again."
             resultUserGuess.hidden = false
