@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     
     var timer = NSTimer()
-    let colorWheel = ColorWheel()
     var randomColor = UIColor()
     var computerChoice = UIColor()
     var count: Int = 0
@@ -32,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        randomColor = colorWheel.randomColor()
+        randomColor = ColorWheel().randomColor()
         view.backgroundColor = randomColor
         guessColorButton.tintColor = randomColor
         guessColorButton.backgroundColor = UIColor.whiteColor()
@@ -68,14 +67,14 @@ class ViewController: UIViewController {
     
     
     func startGame() {
-        computerChoice = colorWheel.randomColor()
+        computerChoice = ColorWheel().randomColor()
         
         timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("changeBackgroundColor"), userInfo: nil, repeats: true)
         
     }
     
     func changeBackgroundColor() {
-        randomColor = colorWheel.randomColor()
+        randomColor = ColorWheel().randomColor()
         view.backgroundColor = randomColor
         guessColorButton.tintColor = randomColor
         resultUserGuess.hidden = true
@@ -83,7 +82,7 @@ class ViewController: UIViewController {
         computerChoiceChangeCounter++
         if(computerChoiceChangeCounter == 3) {
             computerChoiceChangeCounter = 0
-            computerChoice = colorWheel.randomColor()
+            computerChoice = ColorWheel().randomColor()
         }
         
     }
