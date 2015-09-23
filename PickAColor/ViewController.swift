@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     @IBAction func getUserGuess(sender: AnyObject) {
         guessColorButton.enabled = false
-        var currentColor = view.backgroundColor
+        let currentColor = view.backgroundColor
         count++
         
         if(currentColor == computerChoice) {

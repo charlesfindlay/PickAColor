@@ -159,6 +159,8 @@
 		3FD83B5A1BB1D67B00604A7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Charles Findlay";
 				TargetAttributes = {
@@ -413,6 +415,7 @@
 				3FD83B831BB1D67B00604A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FD83B841BB1D67B00604A7C /* Build configuration list for PBXNativeTarget "PickAColorTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +424,7 @@
 				3FD83B861BB1D67B00604A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
